@@ -1,4 +1,4 @@
-package csc220.program5.sample;
+package csc220.program5.lucawr;
 
 import csc220.list.AddIterator;
 import csc220.list.Node;
@@ -38,12 +38,26 @@ public class List<E> extends csc220.list.List<E> {
         
         @Override 
         public void addBeforeNext(E e) {
-            printNodes("Add before next under construction--data to add = " + e);
+            if(first == null){
+                first.data = e;
+                first.next = nextNode;
+        
+            }else{
+                Node tmpNode = nextNode;
+                nextNode.data = e;
+                nextNode.next = nextNode;
+            }
         }
         
         @Override
         public void remove() {
-            printNodes("Remove under construction");
+            if(first != null){
+                prevNode = first;
+                while(prevNode.next != last){
+                    prevNode = prevNode.next;
+                }
+                
+            }
         }
      }
    
