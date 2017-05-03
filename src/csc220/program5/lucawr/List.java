@@ -47,7 +47,10 @@ public class List<E> extends csc220.list.List<E> {
             tmpNode.next = nextNode;
         }
         
-        @Override
+       /**
+        *
+        */
+       @Override
         public void remove() {
             printNodes("Remove under construction");
             

@@ -20,7 +20,6 @@ package csc220.program5;
 
 import csc220.drawing.Camera;
 import csc220.list.List;
-import java.awt.Color;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
