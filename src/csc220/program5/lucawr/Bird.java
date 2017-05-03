@@ -1,6 +1,5 @@
 package csc220.program5.lucawr;
 
-import csc220.list.List;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;

@@ -73,17 +73,16 @@ public class List<E> extends csc220.list.List<E> {
        @Override
         public void remove() {
 
-            if( prevNode != first && prevNode != null){//test to see if prevNode is in the right spot
+            if( prevNode == first){//test to see if prevNode is at the beggining
+                prevNode = prevNode.next;
+                first = prevNode; //reorders list so first is farther down the list
+            }
+            else if(prevNode != null){ //make sure there is something in prevNode to delete
                 Node<E> tmpNode = first;
                 while(tmpNode.next != prevNode){
                     tmpNode = tmpNode.next;//makes tmpNode the node before prevNode
                 }
                 tmpNode.next = nextNode;//relinks it so prevNode does not have to be used
-            }
-            else{
-                prevNode = prevNode.next;//prevNode and first were equal or already null
-                first = prevNode;           //reorders list so first is farther down the list.
-                
             }
             prevNode = null;//eliminates data in prevNode
         }
