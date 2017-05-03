@@ -13,7 +13,7 @@
  * March 22, 2017: Renamed and repackaged class.
  * April  8, 2017: Added default for AddIterator (throws UnsupportedOperationException)
  * April 14, 2017: Cleaned up generics
- * 
+ *
  */
 
 package csc220.list;

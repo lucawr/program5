@@ -6,9 +6,14 @@ import java.awt.Graphics;
 import java.awt.Point;
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * CSC 220 5/3/17
+    Wil Luca
+    Decription: This class draws a bird that is red and has a yellow tail feather.
+    It is contructed using parameters of over, down, width and height andalso extedns 
+    to the abstract class GameCharacer. In the uper constructor a interval speed of 
+    1000 is used, but this is arbitrary and the list that is used is the List class also
+    contained in this package. It is initialized with 4 points already with more
+    being added later through the List class.
  */
 
 /**
