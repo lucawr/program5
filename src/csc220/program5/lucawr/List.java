@@ -74,8 +74,7 @@ public class List<E> extends csc220.list.List<E> {
         public void remove() {
 
             if( prevNode == first){//test to see if prevNode is at the beggining
-                prevNode = prevNode.next;
-                first = prevNode; //reorders list so first is farther down the list
+                first = first.next; //reorders list so first is farther down the list
             }
             else if(prevNode != null){ //make sure there is something in prevNode to delete
                 Node<E> tmpNode = first;
