@@ -38,26 +38,32 @@ public class List<E> extends csc220.list.List<E> {
         
         @Override 
         public void addBeforeNext(E e) {
-            if(first == null){
-                first.data = e;
-                first.next = nextNode;
-        
-            }else{
-                Node tmpNode = nextNode;
-                nextNode.data = e;
-                nextNode.next = nextNode;
+            if(!hasNext()){
+                throw new Error("No Such Element");
             }
+            Node<E> tmpNode = new Node<>();
+            tmpNode.data = e;
+            prevNode.next = tmpNode;
+            tmpNode.next = nextNode;
         }
         
         @Override
         public void remove() {
-            if(first != null){
-                prevNode = first;
-                while(prevNode.next != last){
-                    prevNode = prevNode.next;
+            printNodes("Remove under construction");
+            
+            if( prevNode != first && prevNode != null){
+                Node<E> tmp = first;
+                while(tmp.next != prevNode){
+                    tmp = tmp.next;
                 }
+                tmp.next = nextNode;
+            }
+            else{
+                prevNode = prevNode.next;
+                first = prevNode;
                 
             }
+            prevNode = null;
         }
      }
    
