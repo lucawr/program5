@@ -18,10 +18,9 @@ import java.awt.Point;
 //Begin Contructor 
 public class Bird extends csc220.program5.GameCharacter {
     
-    private Color feather, feather2;
     
 public Bird(int over, int down, int width, int height) {   
- super(over, down, width, height, 1000, new List<Point>() );
+ super(over, down, width, height, 1000, new csc220.program5.lucawr.List<>());
         this.animationPath.add(new Point(over, down));
         this.animationPath.add(new Point(over + 100, down));
         this.animationPath.add(new Point(over, down + 100));

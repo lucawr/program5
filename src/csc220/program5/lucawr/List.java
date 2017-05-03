@@ -13,7 +13,7 @@ public class List<E> extends csc220.list.List<E> {
    protected class ListAddIterator<T extends E> extends csc220.list.List<E>.ListAddIterator<E> {
        
        private static final boolean DEBUGGING = true;
-      
+         Node<E> currentNode;
         protected Node<E> prevNode = null;
         
         @Override
@@ -52,8 +52,7 @@ public class List<E> extends csc220.list.List<E> {
         */
        @Override
         public void remove() {
-            printNodes("Remove under construction");
-            
+
             if( prevNode != first && prevNode != null){
                 Node<E> tmp = first;
                 while(tmp.next != prevNode){
